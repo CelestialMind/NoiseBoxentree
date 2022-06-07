@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Noise Box entree</string>
+    <string name="txt_custom_page_header">Custom</string>
+    <string name="txt_custom_page_length">Device Legth</string>
+    <string name="txt_custom_page_width">Device Width</string>
+    <string name="txt_custom_page_height">Device Height</string>
+    <string name="sw_custom_page_adv_sp">Advanced Soundproof</string>
+    <string name="sw_custom_page_fan">Presence of a Fan</string>
+    <string name="btn_custom_page_add">Add</string>
+    <string name="zero_mm">0mm</string>
+    <string name="txt_c_i_prepayment_text">Prepayment</string>
+    <string name="txt_c_i_cost_text">Cost</string>
+    <string name="txt_cart_page_header">Cart</string>
+</resources>
