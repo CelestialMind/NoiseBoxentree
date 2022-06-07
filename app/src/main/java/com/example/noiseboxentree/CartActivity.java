@@ -30,7 +30,6 @@ public class CartActivity extends AppCompatActivity {
 
         databaseHelper = new DatabaseHelper(this);
         ArrayList<NoiseBox> noiseBoxes = new ArrayList<>();
-//        noiseBoxes.add(new NoiseBox(1, "ultra turbo mega thing", 115, 100, 50, true, true));
         noiseBoxes = databaseHelper.getEverything();
         adapter.setNoiseBoxes(noiseBoxes);
     }
