@@ -1,171 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity_temp">
+    tools:context=".CustomFragment">
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCustomPageHeader"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:elevation="16dp"
-        app:cardCornerRadius="8dp">
+        android:layout_height="match_parent"
+        tools:context=".MainActivity_temp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCustomPageHeader">
+            app:layout_constraintTop_toBottomOf="@+id/txtCustomPageHeader"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="16dp"
+            app:cardCornerRadius="8dp">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnCustomPageAdd"
-                style="@android:style/Widget.Material.Light.Button.Borderless.Colored"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/btn_custom_page_add"
-                android:textColor="?android:attr/textColorPrimary"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/swCustomPageFan"/>
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtCustomPageLength"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:hint="@string/zero_mm"
-                android:importantForAutofill="no"
-                android:inputType="number"
-                android:minHeight="48dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="DuplicateSpeakableTextCheck" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtCustomPageWidth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:hint="@string/zero_mm"
-                android:inputType="number"
-                android:minHeight="48dp"
-                app:layout_constraintEnd_toEndOf="@+id/edtCustomPageLength"
-                app:layout_constraintStart_toStartOf="@+id/edtCustomPageLength"
-                app:layout_constraintTop_toBottomOf="@+id/edtCustomPageLength"
-                android:importantForAutofill="no" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtCustomPageHeight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:hint="@string/zero_mm"
-                android:inputType="number"
-                android:minHeight="48dp"
-                app:layout_constraintEnd_toEndOf="@+id/edtCustomPageWidth"
-                app:layout_constraintStart_toStartOf="@+id/edtCustomPageWidth"
-                app:layout_constraintTop_toBottomOf="@+id/edtCustomPageWidth"
-                android:importantForAutofill="no" />
-
-            <TextView
-                android:id="@+id/txtCustomPageLength"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="@string/txt_custom_page_length"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/edtCustomPageLength"
-                app:layout_constraintStart_toEndOf="@+id/edtCustomPageLength"
-                app:layout_constraintTop_toTopOf="@+id/edtCustomPageLength" />
-
-            <TextView
-                android:id="@+id/txtCustomPageWidth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="@string/txt_custom_page_width"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/edtCustomPageWidth"
-                app:layout_constraintStart_toEndOf="@+id/edtCustomPageWidth"
-                app:layout_constraintTop_toTopOf="@+id/edtCustomPageWidth" />
-
-            <TextView
-                android:id="@+id/txtCustomPageHeight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="@string/txt_custom_page_height"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/edtCustomPageHeight"
-                app:layout_constraintStart_toEndOf="@+id/edtCustomPageHeight"
-                app:layout_constraintTop_toTopOf="@+id/edtCustomPageHeight"
-                app:layout_constraintVertical_bias="0.31" />
-
-            <com.google.android.material.switchmaterial.SwitchMaterial
-                android:id="@+id/swCustomPageAdvSp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:minHeight="48dp"
-                android:text="@string/sw_custom_page_adv_sp"
-                app:layout_constraintEnd_toEndOf="@+id/edtCustomPageHeight"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="@+id/edtCustomPageHeight"
-                app:layout_constraintTop_toBottomOf="@+id/edtCustomPageHeight" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCustomPageHeader">
 
-            <com.google.android.material.switchmaterial.SwitchMaterial
-                android:id="@+id/swCustomPageFan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:minHeight="48dp"
-                android:text="@string/sw_custom_page_fan"
-                app:layout_constraintEnd_toEndOf="@+id/swCustomPageAdvSp"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="@+id/swCustomPageAdvSp"
-                app:layout_constraintTop_toBottomOf="@+id/swCustomPageAdvSp" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCustomPageAdd"
+                    style="@android:style/Widget.Material.Light.Button.Borderless.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/btn_custom_page_add"
+                    android:textColor="?android:attr/textColorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/swCustomPageFan"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtCustomPageLength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:hint="@string/zero_mm"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
 
-    </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtCustomPageWidth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:hint="@string/zero_mm"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    app:layout_constraintEnd_toEndOf="@+id/edtCustomPageLength"
+                    app:layout_constraintStart_toStartOf="@+id/edtCustomPageLength"
+                    app:layout_constraintTop_toBottomOf="@+id/edtCustomPageLength"
+                    android:importantForAutofill="no" />
 
-    <TextView
-        android:id="@+id/txtCustomPageHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/alegreya_sans_medium_italic"
-        android:text="@string/txt_custom_page_header"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtCustomPageHeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:hint="@string/zero_mm"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    app:layout_constraintEnd_toEndOf="@+id/edtCustomPageWidth"
+                    app:layout_constraintStart_toStartOf="@+id/edtCustomPageWidth"
+                    app:layout_constraintTop_toBottomOf="@+id/edtCustomPageWidth"
+                    android:importantForAutofill="no" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fABtnOpenCart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:clickable="true"
-        android:contentDescription="@string/txt_cart_page_header"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+                <TextView
+                    android:id="@+id/txtCustomPageLength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/txt_custom_page_length"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtCustomPageLength"
+                    app:layout_constraintStart_toEndOf="@+id/edtCustomPageLength"
+                    app:layout_constraintTop_toTopOf="@+id/edtCustomPageLength" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/txtCustomPageWidth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/txt_custom_page_width"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtCustomPageWidth"
+                    app:layout_constraintStart_toEndOf="@+id/edtCustomPageWidth"
+                    app:layout_constraintTop_toTopOf="@+id/edtCustomPageWidth" />
+
+                <TextView
+                    android:id="@+id/txtCustomPageHeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/txt_custom_page_height"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtCustomPageHeight"
+                    app:layout_constraintStart_toEndOf="@+id/edtCustomPageHeight"
+                    app:layout_constraintTop_toTopOf="@+id/edtCustomPageHeight"
+                    app:layout_constraintVertical_bias="0.31" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/swCustomPageAdvSp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:minHeight="48dp"
+                    android:text="@string/sw_custom_page_adv_sp"
+                    app:layout_constraintEnd_toEndOf="@+id/edtCustomPageHeight"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/edtCustomPageHeight"
+                    app:layout_constraintTop_toBottomOf="@+id/edtCustomPageHeight" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/swCustomPageFan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:minHeight="48dp"
+                    android:text="@string/sw_custom_page_fan"
+                    app:layout_constraintEnd_toEndOf="@+id/swCustomPageAdvSp"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/swCustomPageAdvSp"
+                    app:layout_constraintTop_toBottomOf="@+id/swCustomPageAdvSp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/txtCustomPageHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/alegreya_sans_medium_italic"
+            android:text="@string/txt_custom_page_header"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fABtnOpenCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:contentDescription="@string/txt_cart_page_header"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
