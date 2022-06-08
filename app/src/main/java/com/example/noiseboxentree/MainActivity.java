@@ -6,7 +6,6 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 
-import com.example.noiseboxentree.databinding.ActivityMainBinding;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         adapter = new FragmentAdapter(fragmentManager, getLifecycle());
         viewPager2.setAdapter(adapter);
-        tabLayout.addTab(tabLayout.newTab().setText("Catalog page"));
-        tabLayout.addTab(tabLayout.newTab().setText("Custom page"));
-        tabLayout.addTab(tabLayout.newTab().setText("About page"));
+        tabLayout.addTab(tabLayout.newTab().setText("Catalog"));
+        tabLayout.addTab(tabLayout.newTab().setText("Custom"));
+        tabLayout.addTab(tabLayout.newTab().setText("About"));
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
