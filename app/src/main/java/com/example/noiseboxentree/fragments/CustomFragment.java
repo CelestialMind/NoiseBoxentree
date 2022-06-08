@@ -65,7 +65,7 @@ public class CustomFragment extends Fragment {
             }else{
                 // when input was ok
                 Toast.makeText(CustomFragment.this.getContext(), noiseBox.toString(), Toast.LENGTH_SHORT).show();
-                if (databaseHelper.addOne(noiseBox)); // finally adds the entered data to the Database
+                if (databaseHelper.addOne(noiseBox, "CUSTOM_NOISE_BOX_TABLE")); // finally adds the entered data to the Database
                 else Toast.makeText(CustomFragment.this.getContext(), "But, how?", Toast.LENGTH_SHORT).show(); // to hell with all of it
             }
         });

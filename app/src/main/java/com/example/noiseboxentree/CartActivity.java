@@ -30,7 +30,7 @@ public class CartActivity extends AppCompatActivity {
 
         databaseHelper = new DatabaseHelper(this);
         ArrayList<NoiseBox> noiseBoxes = new ArrayList<>();
-        noiseBoxes = databaseHelper.getEverything();
+        noiseBoxes = databaseHelper.getEverything("CUSTOM_NOISE_BOX_TABLE");
         adapter.setNoiseBoxes(noiseBoxes);
     }
 }

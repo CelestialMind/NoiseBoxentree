@@ -52,7 +52,7 @@ public class CartItemRecViewAdapter extends RecyclerView.Adapter<CartItemRecView
         holder.txtCICost.setText("9999");
 
         holder.imgCIDelete.setOnClickListener(view -> {
-            databaseHelper.deleteOne(noiseBoxes.get(position));
+            databaseHelper.deleteOne(noiseBoxes.get(position), "CUSTOM_NOISE_BOX_TABLE");
             noiseBoxes.remove(position);
             notifyDataSetChanged();
         });
