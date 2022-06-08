@@ -47,7 +47,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_HAVING_SP_ADVANCED + " BOOL," +
                 COLUMN_HAVING_FAN + " BOOL)";
 
-        String createCatalogTableStatement ="CREATE TABLE " + CUSTOM_NOISE_BOX_TABLE +
+        String createCatalogTableStatement ="CREATE TABLE " + CATALOG_NOISE_BOX_TABLE +
                 "(" + COLUMN_ID + " INTEGER PRIMARY  KEY AUTOINCREMENT," +
                 COLUMN_NAME + " TEXT," +
                 COLUMN_INNER_LENGTH + " INT," +
@@ -80,9 +80,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // puts the data from this NoiseBox instance into a map to the keys representing the columns
         cv.put(COLUMN_NAME, noiseBox.getName());
-        cv.put(COLUMN_LENGTH, noiseBox.getLength());
-        cv.put(COLUMN_WIDTH, noiseBox.getWidth());
-        cv.put(COLUMN_HEIGHT, noiseBox.getHeight());
+//        cv.put(COLUMN_LENGTH, noiseBox.getLength());
+//        cv.put(COLUMN_WIDTH, noiseBox.getWidth());
+//        cv.put(COLUMN_HEIGHT, noiseBox.getHeight());
         cv.put(COLUMN_INNER_LENGTH, noiseBox.getInnerLength());
         cv.put(COLUMN_INNER_WIDTH, noiseBox.getInnerWidth());
         cv.put(COLUMN_INNER_HEIGHT, noiseBox.getInnerHeight());

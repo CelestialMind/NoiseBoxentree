@@ -6,24 +6,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.helper.widget.Layer;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.noiseboxentree.fragments.CatalogFragment;
 import com.google.android.material.card.MaterialCardView;
 
 import java.util.ArrayList;
 
-public class CartItemRecViewAdapter extends RecyclerView.Adapter<CartItemRecViewAdapter.ViewHolder> {
+public class NoiseBoxItemRecViewAdapter extends RecyclerView.Adapter<NoiseBoxItemRecViewAdapter.ViewHolder> {
 
     private ArrayList<NoiseBox> noiseBoxes = new ArrayList<>();
     private Context mContext;
+    private String layoutName;
     private DatabaseHelper databaseHelper;
 
-    public CartItemRecViewAdapter(Context mContext) {
+    public NoiseBoxItemRecViewAdapter(Context mContext, String layoutName) {
         this.mContext = mContext;
+        this.layoutName = layoutName;
         databaseHelper = new DatabaseHelper(mContext);
     }
 
@@ -51,11 +52,20 @@ public class CartItemRecViewAdapter extends RecyclerView.Adapter<CartItemRecView
         holder.txtCIPrepayment.setText("999");
         holder.txtCICost.setText("9999");
 
-        holder.imgCIDelete.setOnClickListener(view -> {
-            databaseHelper.deleteOne(noiseBoxes.get(position), "CUSTOM_NOISE_BOX_TABLE");
-            noiseBoxes.remove(position);
-            notifyDataSetChanged();
-        });
+        switch (layoutName){
+            case "activity_cart":
+                holder.imgCIDelete.setOnClickListener(view -> {
+                    databaseHelper.deleteOne(noiseBoxes.get(position), "CUSTOM_NOISE_BOX_TABLE");
+                    noiseBoxes.remove(position);
+                    notifyDataSetChanged();
+                });
+                break;
+            case "fragment_catalog":
+                holder.imgCIDelete.setVisibility(View.GONE);
+                break;
+            default:
+                break;
+        }
     }
 
     @Override
