@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager2 viewPager2;
     TabLayout tabLayout;
     FragmentAdapter adapter;
+    MaterialButton btnCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,5 +56,13 @@ public class MainActivity extends AppCompatActivity {
                 tabLayout.selectTab(tabLayout.getTabAt(position));
             }
         });
+
+        btnCart = findViewById(R.id.btnMainMenuCart);
+
+        btnCart.setOnClickListener(view -> {
+//            Intent intent = new Intent(this, CartActivity.class);
+            startActivity(new Intent(this, CartActivity.class));
+        });
+
     }
 }
