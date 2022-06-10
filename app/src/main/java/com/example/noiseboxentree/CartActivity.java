@@ -5,6 +5,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
+
+import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 
@@ -12,6 +15,7 @@ public class CartActivity extends AppCompatActivity {
 
     private RecyclerView cartRecView;
     private NoiseBoxItemRecViewAdapter adapter;
+    private MaterialButton btnBuy;
 
     // Database declaration
     DatabaseHelper databaseHelper;
@@ -32,5 +36,11 @@ public class CartActivity extends AppCompatActivity {
         noiseBoxes = databaseHelper.getEverything("CUSTOM_NOISE_BOX_TABLE");
 //        noiseBoxes.add( new NoiseBox(1, "custom", 12, 12, 12,true, true));
         adapter.setNoiseBoxes(noiseBoxes);
+
+        btnBuy = findViewById(R.id.btnCartPageBuy);
+
+        btnBuy.setOnClickListener(view -> {
+            Toast.makeText(this, "u lost cash", Toast.LENGTH_SHORT).show();
+        });
     }
 }

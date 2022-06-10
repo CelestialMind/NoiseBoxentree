@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Noise Box entree</string>
     <string name="txt_custom_page_header">Custom</string>
-    <string name="txt_custom_page_length">Device Legth</string>
+    <string name="txt_custom_page_length">Device Length</string>
     <string name="txt_custom_page_width">Device Width</string>
     <string name="txt_custom_page_height">Device Height</string>
     <string name="sw_custom_page_adv_sp">Advanced Soundproof</string>
@@ -11,7 +11,5 @@
     <string name="txt_c_i_prepayment_text">Prepayment</string>
     <string name="txt_c_i_cost_text">Cost</string>
     <string name="txt_cart_page_header">Cart</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="txt_catalog_page_header">Catalog</string>
 </resources>
