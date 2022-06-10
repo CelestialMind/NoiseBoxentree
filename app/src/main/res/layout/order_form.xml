@@ -5,7 +5,20 @@
     android:layout_height="match_parent"
     android:layout_gravity="center">
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtOrderFormHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order"
+        android:fontFamily="@font/alegreya_sans_medium_italic"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/cvOrderForm"
+        android:layout_marginBottom="24dp"
+        android:elevation="8dp"/>
+
     <androidx.cardview.widget.CardView
+        android:id="@+id/cvOrderForm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="8dp"
@@ -57,6 +70,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
+                android:inputType="phone"
                 app:layout_constraintStart_toStartOf="@+id/txtOrderFormNumberRequest"
                 app:layout_constraintTop_toBottomOf="@+id/txtOrderFormNumberRequest" />
 
@@ -66,12 +80,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginStart="8dp"
-                android:text="Leave us some comment if you will"
+                android:text="Leave us a comment if you will"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edtOrderFormNumber" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtOrderFormCommentLayout"
+            <EditText
+                android:id="@+id/txtOrderFormComment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -79,17 +93,10 @@
                 android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtOrderFormCommentRequest">
-
-                <EditText
-                    android:id="@+id/txtOrderFormComment"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="2"
-                    android:lines="2"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
+                app:layout_constraintTop_toBottomOf="@+id/txtOrderFormCommentRequest"
+                android:maxLines="2"
+                android:lines="2"
+            />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnOrderFormOrder"
@@ -99,7 +106,7 @@
                 android:text="Sent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtOrderFormCommentLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/txtOrderFormComment" />
 
             <TextView
                 android:layout_width="wrap_content"

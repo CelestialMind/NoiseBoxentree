@@ -1,6 +1,7 @@
 package com.example.noiseboxentree.cartactivity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -9,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -29,6 +31,7 @@ public class CartActivity extends AppCompatActivity {
     EditText edtDialogName;
     MaterialButton btnDialogOrder;
     ImageView imgDialogDelete;
+    FrameLayout activityLayout;
 
     // Database declaration
     DatabaseHelper databaseHelper;
@@ -55,12 +58,22 @@ public class CartActivity extends AppCompatActivity {
         btnOpenOrderForm.setOnClickListener(view -> {
 //            callLoginDialog();
             startActivity(new Intent(CartActivity.this, OrderForm.class));
+            activityLayout.getForeground().setAlpha( 200);
         });
+
+        activityLayout = findViewById( R.id.cart_view_page_foregrounder);
+        activityLayout.getForeground().setAlpha( 0);
 
     }
 
-    private void callLoginDialog()
-    {
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        activityLayout = findViewById( R.id.cart_view_page_foregrounder);
+        activityLayout.getForeground().setAlpha( 0);
+    }
+
+    private void callLoginDialog() {
         dialog = new Dialog(this);
         dialog.setContentView(R.layout.order_dialog);
         dialog.setCancelable(false);
