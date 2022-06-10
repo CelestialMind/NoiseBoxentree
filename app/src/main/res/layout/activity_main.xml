@@ -25,6 +25,7 @@
         android:layout_alignBottom="@id/main_menu_view_pager"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:elevation="16dp"/>
 
 </RelativeLayout>
