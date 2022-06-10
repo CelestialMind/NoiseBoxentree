@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CartActivity"
+    tools:context=".cartactivity.CartActivity"
     android:id="@+id/cart_view_page">
 
     <TextView
@@ -33,7 +33,7 @@
         android:paddingBottom="64dp"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnCartPageBuy"
+        android:id="@+id/btnCartPageOpenOrderForm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Order"

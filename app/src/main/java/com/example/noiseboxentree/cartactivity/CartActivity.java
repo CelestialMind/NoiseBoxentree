@@ -1,16 +1,21 @@
-package com.example.noiseboxentree;
+package com.example.noiseboxentree.cartactivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.noiseboxentree.DatabaseHelper;
+import com.example.noiseboxentree.NoiseBox;
+import com.example.noiseboxentree.NoiseBoxItemRecViewAdapter;
+import com.example.noiseboxentree.R;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
@@ -19,10 +24,10 @@ public class CartActivity extends AppCompatActivity {
 
     private RecyclerView cartRecView;
     private NoiseBoxItemRecViewAdapter adapter;
-    private MaterialButton btnBuy;
+    private MaterialButton btnOpenOrderForm;
     Dialog dialog;
     EditText edtDialogName;
-    MaterialButton btnDialogDrder;
+    MaterialButton btnDialogOrder;
     ImageView imgDialogDelete;
 
     // Database declaration
@@ -45,10 +50,11 @@ public class CartActivity extends AppCompatActivity {
 //        noiseBoxes.add( new NoiseBox(1, "custom", 12, 12, 12,true, true));
         adapter.setNoiseBoxes(noiseBoxes);
 
-        btnBuy = findViewById(R.id.btnCartPageBuy);
+        btnOpenOrderForm = findViewById(R.id.btnCartPageOpenOrderForm);
 
-        btnBuy.setOnClickListener(view -> {
-            callLoginDialog();
+        btnOpenOrderForm.setOnClickListener(view -> {
+//            callLoginDialog();
+            startActivity(new Intent(CartActivity.this, OrderForm.class));
         });
 
     }
@@ -58,13 +64,13 @@ public class CartActivity extends AppCompatActivity {
         dialog = new Dialog(this);
         dialog.setContentView(R.layout.order_dialog);
         dialog.setCancelable(false);
-        btnDialogDrder = dialog.findViewById(R.id.btnOrderDialogOrder);
+        btnDialogOrder = dialog.findViewById(R.id.btnOrderDialogOrder);
         imgDialogDelete = dialog.findViewById(R.id.imgOrderDialogDelete);
 
-        edtDialogName = dialog.findViewById(R.id.edtOrderDialogNameRequest);
+        edtDialogName = dialog.findViewById(R.id.edtOrderDialogName);
         dialog.show();
 
-        btnDialogDrder.setOnClickListener(view -> {
+        btnDialogOrder.setOnClickListener(view -> {
             Toast.makeText(CartActivity.this, "Say hello to my little friend!", Toast.LENGTH_SHORT).show();
             dialog.dismiss();
         });

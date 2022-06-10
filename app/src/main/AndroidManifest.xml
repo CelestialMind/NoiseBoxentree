@@ -14,7 +14,7 @@
         android:theme="@style/Theme.NoiseBoxEntree"
         tools:targetApi="31">
         <activity
-            android:name=".CartActivity"
+            android:name=".cartactivity.CartActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -25,6 +25,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".cartactivity.OrderForm"
+            android:theme="@style/CustomTheme"
+            ></activity>
     </application>
 
 </manifest>

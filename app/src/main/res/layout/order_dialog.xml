@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="250dp"
     android:layout_height="wrap_content"
-    android:layout_marginStart="48dp"
-    android:layout_marginEnd="48dp">
+    app:cardCornerRadius="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -28,18 +26,38 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Tell us yor name"
+            android:layout_marginStart="8dp"
+            android:text="Tell us your name"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txtOrderDialogHeader" />
 
         <EditText
-            android:id="@+id/edtOrderDialogNameRequest"
-            android:layout_width="wrap_content"
+            android:id="@+id/edtOrderDialogName"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="@+id/txtOrderDialogNameRequest"
+            android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="@+id/txtOrderDialogNameRequest"
             app:layout_constraintTop_toBottomOf="@+id/txtOrderDialogNameRequest" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtOrderDialogNumberRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:text="Tell us your phone number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtOrderDialogName" />
+
+        <EditText
+            android:id="@+id/edtOrderDialogNumber"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="@+id/txtOrderDialogNumberRequest"
+            app:layout_constraintTop_toBottomOf="@+id/txtOrderDialogNumberRequest" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnOrderDialogOrder"
@@ -48,7 +66,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtOrderDialogNameRequest"
+            app:layout_constraintTop_toBottomOf="@+id/edtOrderDialogNumber"
+            android:layout_marginTop="8dp"
             android:text="Sent"/>
 
         <ImageView

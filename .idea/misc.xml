@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/SHIFT/AndroidStudioProjects/NoiseBoxentree/app/src/main/res/drawable/background_dimmer.xml" value="0.2125" />
         <entry key="..\:/Users/SHIFT/AndroidStudioProjects/NoiseBoxentree/app/src/main/res/drawable/delete_button.xml" value="0.1885" />
         <entry key="..\:/Users/SHIFT/AndroidStudioProjects/NoiseBoxentree/app/src/main/res/layout/activity_cart.xml" value="0.225" />
         <entry key="..\:/Users/SHIFT/AndroidStudioProjects/NoiseBoxentree/app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -11,7 +12,9 @@
         <entry key="..\:/Users/SHIFT/AndroidStudioProjects/NoiseBoxentree/app/src/main/res/layout/fragment_catalog.xml" value="0.225" />
         <entry key="..\:/Users/SHIFT/AndroidStudioProjects/NoiseBoxentree/app/src/main/res/layout/fragment_custom.xml" value="0.225" />
         <entry key="..\:/Users/SHIFT/AndroidStudioProjects/NoiseBoxentree/app/src/main/res/layout/list_item_cart.xml" value="0.1" />
+        <entry key="..\:/Users/SHIFT/AndroidStudioProjects/NoiseBoxentree/app/src/main/res/layout/order_dialog.xml" value="0.33" />
         <entry key="..\:/Users/SHIFT/AndroidStudioProjects/NoiseBoxentree/app/src/main/res/layout/order_dialog_activity.xml" value="0.25" />
+        <entry key="..\:/Users/SHIFT/AndroidStudioProjects/NoiseBoxentree/app/src/main/res/layout/order_form.xml" value="0.33" />
       </map>
     </option>
   </component>
