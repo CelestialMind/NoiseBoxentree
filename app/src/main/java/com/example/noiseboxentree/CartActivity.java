@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Dialog;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
@@ -16,6 +20,10 @@ public class CartActivity extends AppCompatActivity {
     private RecyclerView cartRecView;
     private NoiseBoxItemRecViewAdapter adapter;
     private MaterialButton btnBuy;
+    Dialog dialog;
+    EditText edtDialogName;
+    MaterialButton btnDialogDrder;
+    ImageView imgDialogDelete;
 
     // Database declaration
     DatabaseHelper databaseHelper;
@@ -40,7 +48,28 @@ public class CartActivity extends AppCompatActivity {
         btnBuy = findViewById(R.id.btnCartPageBuy);
 
         btnBuy.setOnClickListener(view -> {
-            Toast.makeText(this, "u lost cash", Toast.LENGTH_SHORT).show();
+            callLoginDialog();
         });
+
+    }
+
+    private void callLoginDialog()
+    {
+        dialog = new Dialog(this);
+        dialog.setContentView(R.layout.order_dialog);
+        dialog.setCancelable(false);
+        btnDialogDrder = dialog.findViewById(R.id.btnOrderDialogOrder);
+        imgDialogDelete = dialog.findViewById(R.id.imgOrderDialogDelete);
+
+        edtDialogName = dialog.findViewById(R.id.edtOrderDialogNameRequest);
+        dialog.show();
+
+        btnDialogDrder.setOnClickListener(view -> {
+            Toast.makeText(CartActivity.this, "Say hello to my little friend!", Toast.LENGTH_SHORT).show();
+            dialog.dismiss();
+        });
+
+        imgDialogDelete.setOnClickListener(view -> dialog.dismiss());
+
     }
 }
