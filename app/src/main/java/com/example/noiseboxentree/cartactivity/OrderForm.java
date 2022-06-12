@@ -3,6 +3,8 @@ package com.example.noiseboxentree.cartactivity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.Window;
+import android.view.WindowManager;
 
 import androidx.annotation.Nullable;
 
@@ -22,5 +24,9 @@ public class OrderForm extends Activity {
 
 //        getWindow().setLayout((int)(width*.8), (int)(height*.5));
         getWindow().setLayout(width, height);
+//        Window window = this.getWindow();
+//        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+//        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//        window.setStatusBarColor(this.getResources().getColor(R.color.purple_200));
     }
 }

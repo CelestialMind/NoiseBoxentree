@@ -48,11 +48,6 @@ public class CustomFragment extends Fragment {
         databaseHelper = new DatabaseHelper(this.getActivity());
 
 
-//        fABtnOpenCart.setOnClickListener(view -> {
-//            Intent intent = new Intent(CustomFragment.this.getActivity(), CartActivity.class);
-//            startActivity(intent);
-//        });
-
         // Data retrieving button of the Custom page is clicked
         btnCustomPageAdd.setOnClickListener(view -> {
             NoiseBox noiseBox = readerFromCustomPage(); // initializes NoiseBox instance using prepared function
@@ -103,7 +98,6 @@ public class CustomFragment extends Fragment {
         swCustomPageAdvSp = view.findViewById(R.id.swCustomPageAdvSp);
         swCustomPageFan = view.findViewById(R.id.swCustomPageFan);
         btnCustomPageAdd = view.findViewById(R.id.btnCustomPageAdd);
-//        fABtnOpenCart = view.findViewById(R.id.fABtnOpenCart);
     }
 
 }

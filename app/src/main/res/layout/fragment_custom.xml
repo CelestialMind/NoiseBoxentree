@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.CustomFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity_temp">
@@ -15,14 +14,14 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCustomPageHeader"
-            android:layout_marginTop="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginTop="24dp"
             android:elevation="16dp"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -43,7 +42,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/swCustomPageFan"/>
+                    app:layout_constraintTop_toBottomOf="@+id/swCustomPageFan" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtCustomPageLength"
@@ -67,12 +66,12 @@
                     android:layout_marginTop="16dp"
                     android:ems="10"
                     android:hint="@string/zero_mm"
+                    android:importantForAutofill="no"
                     android:inputType="number"
                     android:minHeight="48dp"
                     app:layout_constraintEnd_toEndOf="@+id/edtCustomPageLength"
                     app:layout_constraintStart_toStartOf="@+id/edtCustomPageLength"
-                    app:layout_constraintTop_toBottomOf="@+id/edtCustomPageLength"
-                    android:importantForAutofill="no" />
+                    app:layout_constraintTop_toBottomOf="@+id/edtCustomPageLength" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtCustomPageHeight"
@@ -81,12 +80,12 @@
                     android:layout_marginTop="16dp"
                     android:ems="10"
                     android:hint="@string/zero_mm"
+                    android:importantForAutofill="no"
                     android:inputType="number"
                     android:minHeight="48dp"
                     app:layout_constraintEnd_toEndOf="@+id/edtCustomPageWidth"
                     app:layout_constraintStart_toStartOf="@+id/edtCustomPageWidth"
-                    app:layout_constraintTop_toBottomOf="@+id/edtCustomPageWidth"
-                    android:importantForAutofill="no" />
+                    app:layout_constraintTop_toBottomOf="@+id/edtCustomPageWidth" />
 
                 <TextView
                     android:id="@+id/txtCustomPageLength"
@@ -150,29 +149,18 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-        <TextView
-            android:id="@+id/txtCustomPageHeader"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/alegreya_sans_medium_italic"
-            android:text="@string/txt_custom_page_header"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--            android:id="@+id/fABtnOpenCart"-->
+<!--        <TextView-->
+<!--            android:id="@+id/txtCustomPageHeader"-->
 <!--            android:layout_width="wrap_content"-->
 <!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginEnd="8dp"-->
-<!--            android:layout_marginBottom="8dp"-->
-<!--            android:clickable="true"-->
-<!--            android:contentDescription="@string/txt_cart_page_header"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:fontFamily="@font/alegreya_sans_medium_italic"-->
+<!--            android:text="@string/txt_custom_page_header"-->
+<!--            android:textSize="24sp"-->
 <!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:srcCompat="@drawable/ic_launcher_foreground" />-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
